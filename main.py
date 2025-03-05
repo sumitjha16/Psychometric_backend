@@ -39,6 +39,9 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173", 
         "https://psychometric-test5.netlify.app"
+        "http://psychometric-test5.netlify.app"
+        "https://*.netlify.app",  # Add wildcard for all Netlify subdomains
+        "http://localhost:*",
     ],
     allow_credentials=True,
     allow_methods=["*"],
