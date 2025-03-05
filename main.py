@@ -36,13 +36,7 @@ app = FastAPI(
 # CORS Middleware Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173", 
-        "https://psychometric-test5.netlify.app"
-        "http://psychometric-test5.netlify.app"
-        "https://*.netlify.app",  # Add wildcard for all Netlify subdomains
-        "http://localhost:*",
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
